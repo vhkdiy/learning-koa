@@ -18,13 +18,13 @@ module.exports = {
       let data
       let { name, password } = ctx.request.body
       if (name === 'vhkdiy' && password === '123456') {
-        await ctx.render('home/login', {
+        await ctx.render('home/success', {
           title: '个人中心',
           content: '欢迎进入个人中心'
         })
       } else {
         ctx.state.title = '个人中心'
-        await ctx.render('home/success', {
+        await ctx.render('home/login', {
           title: '登录失败',
           content: '请输入正确的账号信息'
         })
